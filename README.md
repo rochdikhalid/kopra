@@ -1,7 +1,7 @@
 # kopra-v1
 A simple full-stack taxi management web app built with Django, Angular, Leaflet, and PostgreSQL
 
-# Installation Walkthrough
+# Project Setup
 
 1- Make sure you have the latest version of Python installed (prefered).
 
