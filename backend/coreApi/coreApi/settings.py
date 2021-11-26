@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +42,9 @@ INSTALLED_APPS = [
     'rest_framework',
     # Cors Headers
     'corsheaders',
+    # Stations App
+    'stations.apps.StationsConfig',
+    
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -83,11 +87,14 @@ WSGI_APPLICATION = 'koprApi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_KOPRA_NAME'),
+        'USER': 'postgres',
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
