@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'fleets.apps.FleetsConfig',
     # Trips App
     'trips.apps.TripsConfig',
+    # Passengers App
+    'passengers.apps.PassengersConfig',
     
 ]
 
