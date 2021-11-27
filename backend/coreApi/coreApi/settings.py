@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'stations.apps.StationsConfig',
     # Drivers App
     'drivers.apps.DriversConfig',
+    # Fleets App
+    'fleets.apps.FleetsConfig',
     
 ]
 
