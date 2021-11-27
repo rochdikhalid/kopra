@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'drivers.apps.DriversConfig',
     # Fleets App
     'fleets.apps.FleetsConfig',
+    # Trips App
+    'trips.apps.TripsConfig',
     
 ]
 
