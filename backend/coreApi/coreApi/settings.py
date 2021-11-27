@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'corsheaders',
     # Stations App
     'stations.apps.StationsConfig',
+    # Drivers App
+    'drivers.apps.DriversConfig',
     
 ]
 
