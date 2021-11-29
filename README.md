@@ -3,35 +3,39 @@ A simple full-stack taxi management web app built with Django, Angular, Leaflet,
 
 # Step I - Backend Setup
 
-1- Make sure you have the latest version of Python installed (prefered).
+The project backend was generated with [Django](https://github.com/django/django) version 3.2.9
 
-2- Clone the repository.<br>
-3- Open the repository using the command line by copying its path.
+a- Make sure you have the latest version of Python installed (prefered).
+b- Clone the repository.<br>
+c- Open the repository using the command line by copying its path.
 
+## 1- Virtual Environment Configuration
 
-4- Create a virtual environment using the following: <br>
+a- Create a virtual environment using the following: <br>
 
 `python3 -m venv <name_of_virtualenv>`
 
-5- Activate the virtual environment by running the following:<br>
+b- Activate the virtual environment by running the following:<br>
 
 `<name_of_virtualenv>\Scripts\activate`
 
-6- Install the dependencies as highlighted below using the requirement.txt file:<br>
+c- Install the dependencies as highlighted below using the requirement.txt file:<br>
 
 `pip install -r requirements.txt`
 
-7- Go to coreApi directory and migrate the existing database tables:<br>
+## 2- Development Server
+
+a- Go to coreApi directory and migrate the existing database tables:<br>
 
 `python manage.py migrate`
 
-8- Run the Django development server:<br>
+b- Run the Django development server:<br>
 
 `python manage.py runserver`
 
 # Step II - Frontend Setup
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7
+The project frontend was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7
 
 ## 1- Development Server
 
