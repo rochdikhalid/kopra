@@ -5,7 +5,7 @@ A simple full-stack taxi management web app built with Django, Angular, Leaflet,
 
 The project backend was generated with [Django](https://github.com/django/django) version 3.2.9
 
-a- Make sure you have the latest version of Python installed (prefered).
+a- Make sure you have the latest version of Python installed (prefered).<br>
 b- Clone the repository.<br>
 c- Open the repository using the command line by copying its path.
 
