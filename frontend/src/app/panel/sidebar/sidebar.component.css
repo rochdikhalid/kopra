@@ -1,0 +1,50 @@
+.sidebar {
+    width: 200px;
+    height: 87vh;
+    background-color: #1D3557;
+    position: fixed;
+    margin-left: -15px;
+}
+
+.sidebar .input-group {
+    padding: 20px;
+}
+
+.sidebar .input-group input {
+    height: 30px;
+    font-size: 13px;
+    color: #1D3557;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar .down-menu {
+    position: absolute;
+    bottom: 0;
+}
+
+.sidebar ul li {
+    list-style-type: none;
+    line-height: 35px;
+}
+
+.sidebar ul li a {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: medium;
+    color: #FFF;
+}
+
+.sidebar ul li a.active {
+    font-weight: bolder;
+}
+
+.sidebar ul li a span i {
+    padding-right: 5px;
+}
+
