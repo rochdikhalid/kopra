@@ -49,7 +49,11 @@ The app will automatically reload if you change any of the source files.
 Run `ng generate component component-name` to generate a new component. <br>
 You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## 3- Further help
+## 3- Packages to Install
+
+Run `npm install bootstrap`
+
+## 4- Further help
 
 To get more help on the Angular CLI:<br>
 
