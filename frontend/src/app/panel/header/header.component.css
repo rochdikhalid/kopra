@@ -1,0 +1,17 @@
+header {
+    margin-bottom: 70px;
+}
+
+header nav {
+    background-color: #1d3557;
+    color: #FFF;
+}
+
+header nav .navbar-brand {
+    font-family: 'Dela Gothic One', sans-serif;
+    color: #FFF;
+}
+
+header nav .navbar-brand svg {
+    margin-top: -3px;
+}
