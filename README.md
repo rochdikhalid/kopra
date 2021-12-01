@@ -51,7 +51,7 @@ You can also use `ng generate directive|pipe|service|class|guard|interface|enum|
 
 ## 3- Packages to Install
 
-Run `npm install bootstrap`
+Run `npm install bootstrap jquery @types/jquery popper.js leaflet @types/leaflet`
 
 ## 4- Further help
 
