@@ -1,0 +1,51 @@
+<form>
+    <div class = "form-group">
+      <label for = "station" class = "text-muted"> Select Start and End points </label>
+      <div class = "row">
+        <div class = "col-5 form-group">
+          <select class = "form-control" id = "from_station" (change) = "disable()" [(ngModel)] = "trip.trip_from" [ngModelOptions] = "{standalone: true}">
+            <option> -- Select From -- </option>
+            <option [value] = "stationName.name" *ngFor = "let stationName of stationsNames">
+              {{ stationName.name }}
+            </option>
+          </select>
+        </div>  
+        <div class = "col-5 form-group">
+          <select class = "form-control" id = "to_station" [(ngModel)] = "trip.trip_to" [ngModelOptions] = "{standalone: true}">
+            <option> -- Select To -- </option>
+            <option [value] = "stationName.name" *ngFor = "let stationName of stationsNames">
+              {{ stationName.name }}
+            </option>
+          </select>
+        </div> 
+        <div class = "col-2 form-group">
+          <button class = "btn btn-warning" id = "go"> GO </button>
+        </div>
+      </div>
+    </div>
+
+    <div class = "map rounded mb-3" id = "map">
+
+    </div>
+
+    <div class = "form-group">
+      <label for = "distance" class = "font-weight-bolder"> Distance </label>
+      <input type = "distance" class = "form-control" placeholder = "Distance (selected automatically)" id = "location" [(ngModel)] = "trip.distance" [ngModelOptions] = "{standalone: true}">
+    </div>
+
+    <div class = "form-group">
+      <label for = "duration" class = "font-weight-bolder"> Duration </label>
+      <input type = "duration" class = "form-control" placeholder = "Duration (selected automatically)" id = "name" [(ngModel)] = "trip.duration" [ngModelOptions] = "{standalone: true}">
+    </div>
+
+    <button (click) = "addTrip()" *ngIf = "trip.id == 0" class = "btn btn-primary w-100 mt-2">
+      <span><i class = "bi bi-plus"></i></span>
+      <span> Add </span>
+    </button>
+
+    <button (click) = "updateTrip()" *ngIf = "trip.id != 0" class = "btn btn-primary w-100 mt-2">
+      <span><i class = "bi bi-plus"></i></span>
+      <span> Update </span>
+    </button>
+
+</form>
