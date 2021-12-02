@@ -5,5 +5,5 @@ from trips import views
 
 
 urlpatterns = [
-    path('<int:id>', views.tripApi),
+    path('<int:id>/', views.tripApi),
 ]
