@@ -1,0 +1,22 @@
+
+form .row {
+    margin-bottom: 0px;
+}
+
+form label, form input {
+    font-size: 13px;
+    color: #1D3557;
+}
+
+form ::placeholder {
+    color: #1D3557;
+}
+
+form button {
+    background-color: #00B4d8;
+    border-color: #00B4d8;
+    color: #FFF;
+    font-weight: bolder;
+    margin-bottom: -10px;
+    margin-top: 5px;
+}
