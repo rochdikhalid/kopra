@@ -1,0 +1,102 @@
+<!-- First card -->
+<div class = "card">
+
+  <div class = "card-body panel-0 rounded">
+
+      <!-- Sub-content-1 -->
+      <div class = "d-flex justify-content-between">
+
+          <!-- Title and description -->
+                  
+          <div class = "header">
+              <h5>
+                  <span><i class = "bi bi-flag"></i></span>
+                  <span class = "font-weight-bolder"> {{ parentData.headerTitle }} </span>
+                  <p> {{ parentData.headerDescription }} </p>
+              </h5>
+          </div>
+      
+          <!-- Add a new data -->
+          <div class = "header">
+              <button class = "btn btn-outline-light float-right font-weight-bolder" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-backdrop = "static" data-keyboard = "false" (click) = "addClick()">
+                  <span><i class = "bi bi-plus"></i></span>
+                  <span> {{ parentData.headerBtn }} </span> 
+              </button>
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+<!-- Sub-content-2 -->
+<div class = "card">
+
+  <div class = "card-body">
+
+    <!-- Table -->
+    <table class = "table">
+        <thead class = "pl-4">
+          <tr>
+            <th class = "text-center"> # </th>
+            <th> Name </th>
+            <th> Location </th>
+            <th> Capacity </th>
+            <th> Area </th>
+            <th class = "text-center"> Actions </th>
+          </tr>
+        </thead>
+        <br/>
+
+        <tbody *ngFor = "let stationData of stationsList">
+          
+          <tr>
+            <td class = "text-center"> {{ stationData.id }} </td>
+            <td> {{ stationData.name | titlecase }} </td>
+            <td> {{ stationData.location_string | titlecase }} </td>
+            <td> {{ stationData.capacity }} </td>
+            <td> {{ stationData.area }} </td>
+            <td class = "text-center">
+              <button class = "btn btn-danger" data-bs-toggle = "modal" data-bs-target = "#deleteModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "deleteClick(stationData)">
+                <i class = "bi bi-trash"></i>
+              </button>
+              <button class = "btn btn-info" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "editClick(stationData)">
+                <i class = "bi bi-pencil"></i>
+              </button>
+            </td>  
+          </tr>
+          <br/>
+          
+        </tbody>
+
+      </table>
+
+  </div>
+
+</div>
+
+<!-- Modals -->
+
+<!-- AddEdit Modal -->
+<div class = "modal fade" id = "addEditModal">
+  <div class = "modal-dialog modal-dialog-centered">
+    <div class = "modal-content container">
+    
+      <!-- Modal Header -->
+      <div class = "modal-header">
+        <h5 class = "modal-title">
+          <span><i class = "bi bi-flag"></i></span>
+          <span> {{ modalTitle }} </span> 
+        </h5>
+        <button type = "button" class = "btn-close" data-bs-dismiss = "modal" (click) = "closeClick()"></button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class = "modal-body">
+        <app-add-edit-station [station] = "station" *ngIf = "ActivateAddEditStationComp"></app-add-edit-station>
+      </div>
+      
+    </div>
+  </div>
+</div>
