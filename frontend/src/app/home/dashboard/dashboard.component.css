@@ -22,13 +22,8 @@
 }
 
 .content .card .col-10 .card-body {
-    height: 451px;
+    height: 405px;
 }
-/*
-.content .card .col-2 .card-body {
-    background-color: #4361ee;
-}
-*/
 
 .content .card .card-body .header p {
     font-size: 15px;
