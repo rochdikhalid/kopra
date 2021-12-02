@@ -1,0 +1,47 @@
+<form>
+
+  <div class = "row form-group">
+      <div class = "col-6 form-group">
+          <label for = "size" class = "font-weight-bolder"> Size </label>
+          <input type = "size" class = "form-control" placeholder = "Enter fleet size" id = "size" [(ngModel)] = "fleet.size" [ngModelOptions] = "{standalone: true}">
+        </div>
+        <div class = "col-6 form-group">
+          <label for = "brand" class = "font-weight-bolder"> Brand </label>
+          <input type = "brand" class = "form-control" placeholder = "Enter brand name" id = "brand name" [(ngModel)] = "fleet.brand" [ngModelOptions] = "{standalone: true}">
+        </div>  
+  </div>
+
+  <div class = "row form-group">
+      <div class = "col-6 form-group">
+          <label for = "type" class = "font-weight-bolder"> Type </label>
+          <input type = "type" class = "form-control" placeholder = "Enter type" id = "type" [(ngModel)] = "fleet.fleet_type" [ngModelOptions] = "{standalone: true}">
+        </div>
+        <div class = "col-6 form-group">
+          <label for = "model" class = "font-weight-bolder"> Model </label>
+          <input type = "model" class = "form-control" placeholder = "Enter model" id = "model" [(ngModel)] = "fleet.fleet_model" [ngModelOptions] = "{standalone: true}">
+        </div>  
+  </div>
+
+  <div class = "row mb-3">
+    <div class = "col-12 form-group">
+      <label for = "station" class = "font-weight-bolder"> Select Station </label>
+      <select class = "form-control" id = "station" [(ngModel)] = "fleet.station" [ngModelOptions] = "{standalone: true}">
+        <option> -- Choose a Station -- </option>
+        <option *ngFor = "let stationName of stationsNames">
+          {{ stationName.name }}
+        </option>
+      </select>
+    </div>  
+  </div>
+
+  <button (click) = "addFleet()" *ngIf = "fleet.id == 0" class = "btn btn-primary w-100">
+    <span><i class = "bi bi-plus"></i></span>
+    <span> Add </span>
+  </button>
+
+  <button (click) = "updateFleet()" *ngIf = "fleet.id != 0" class = "btn btn-primary w-100">
+    <span><i class = "bi bi-plus"></i></span>
+    <span> Update </span>
+  </button>
+
+</form>
