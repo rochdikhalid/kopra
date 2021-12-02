@@ -1,0 +1,66 @@
+/* Sub-content-1 */
+
+.card {
+    margin-top: 15px;
+}
+
+.card .panel-0 {
+    height: 85px;
+    background-color: #00b4d8;
+    color: #FFF;
+    border: 1px solid #00b4d8;
+}
+
+.card .panel-0 button:hover {
+    color: #00b4d8;
+}
+
+.card .col-10 .card-body {
+    height: 451px;
+}
+
+.card .card-body .header p {
+    font-size: 15px;
+    padding-left: 25px;
+}
+
+.card .card-body .header button {
+    height: 40px;
+}
+
+.card .table  {
+    font-size: 14px;
+    color: #1D3557;
+}
+
+.card .table thead tr th, .card .table tbody tr td{
+    border-style: none;
+    padding-left: 50px;
+}
+
+.card .table tbody tr {
+    background-color: #FFF;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+.card .table tbody tr .btn-danger {
+    background-color: #E63946;
+}
+
+.card .table tbody tr .btn-info {
+    background-color: #7d4c9e;
+    border-color: #7d4c9e;
+}
+
+.card .table tbody {
+    border-style: none;
+}
+
+.modal .modal-header h5 {
+    color: #1D3557;
+    font-weight: bolder;
+}
+
+.modal .close {
+    color: #1D3557;
+}
