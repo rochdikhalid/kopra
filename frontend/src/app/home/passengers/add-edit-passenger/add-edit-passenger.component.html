@@ -1,0 +1,51 @@
+<form> 
+
+    <div class = "row form-group">
+        <div class = "col-12 form-group">
+            <label for = "name" class = "font-weight-bolder"> Name </label>
+            <input type = "name" class = "form-control" placeholder = "Enter name" id = "name" [(ngModel)] = "commuter.name" [ngModelOptions] = "{standalone: true}">
+          </div>
+    </div>
+
+    <div class = "row form-group">
+        <div class = "col-12 form-group">
+        <label for = "email" class = "font-weight-bolder"> Email </label>
+        <input type = "email" class = "form-control" placeholder = "Enter email" id = "email" [(ngModel)] = "commuter.email" [ngModelOptions] = "{standalone: true}">
+        </div>  
+    </div>
+
+    <div class = "row form-group">
+        <div class = "col-6 form-group">
+            <label for = "date-of-birth" class = "font-weight-bolder"> Date of birth </label>
+            <input type = "date" class = "form-control" placeholder = "Enter date of birth" id = "date-of-birth" [(ngModel)] = "commuter.dob" [ngModelOptions] = "{standalone: true}">
+        </div>
+        <div class = "col-6 form-group">
+            <label for = "gender" class = "font-weight-bolder"> Gender </label>
+            <select class = "form-control" id = "gender" [(ngModel)] = "commuter.gender" [ngModelOptions] = "{standalone: true}">
+                <option> Male </option>
+                <option> Female </option>
+                <option> Alien </option>
+            </select>
+        </div>  
+    </div>
+
+    <div class = "form-group">
+        <label for = "subscription" class = "font-weight-bolder"> Subscription </label>
+        <select class = "form-control" id = "subscription" [(ngModel)] = "commuter.subscription" [ngModelOptions] = "{standalone: true}">
+            <option> Monthly </option>
+            <option> Quaterly </option>
+            <option> Yearly </option>
+        </select>
+    </div>  
+
+    <button (click) = "addCommuter()" *ngIf = "commuter.id == 0" class = "btn btn-primary w-100">
+        <span><i class = "bi bi-plus"></i></span>
+        <span> Add </span>
+      </button>
+    
+    <button (click) = "updateCommuter()" *ngIf = "commuter.id != 0" class = "btn btn-primary w-100">
+        <span><i class = "bi bi-plus"></i></span>
+        <span> Update </span>
+    </button>
+
+</form>
