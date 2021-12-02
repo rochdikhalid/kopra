@@ -39,9 +39,8 @@ The project frontend was generated with [Angular CLI](https://github.com/angular
 
 ## 1- Development Server
 
-a- Using your CMD, go to "frontend" directory. <br>
-b- Run `ng serve` for a dev server. <br>
-c- Navigate to `http://localhost:4200/`. <br>
+a- Run `ng serve` for a dev server. <br>
+b- Navigate to `http://localhost:4200/`. <br>
 The app will automatically reload if you change any of the source files.
 
 ## 2- Code Scaffolding
