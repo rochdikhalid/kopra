@@ -1,0 +1,103 @@
+<!-- First card -->
+<div class = "card">
+
+  <div class = "card-body panel-0 rounded">
+
+      <!-- Sub-content-1 -->
+      <div class = "d-flex justify-content-between">
+
+          <!-- Title and description -->
+                  
+          <div class = "header">
+              <h5>
+                  <span><i class = "bi bi-diagram-3"></i></span>
+                  <span class = "font-weight-bolder"> {{ parentData.headerTitle }} </span>
+                  <p> {{ parentData.headerDescription }} </p>
+              </h5>
+          </div>
+      
+          <!-- Add a new data -->
+          <div class = "header">
+              <button class = "btn btn-outline-light float-right font-weight-bolder" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "addClick()">
+                  <span><i class = "bi bi-plus"></i></span>
+                  <span> {{ parentData.headerBtn }} </span> 
+              </button>
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+<!-- Sub-content-2 -->
+<div class = "card">
+
+  <div class = "card-body">
+
+    <!-- Table -->
+    <table class = "table">
+        <thead class = "pl-4">
+          <tr>
+            <th class = "text-center"> # </th>
+            <th> Size </th>
+            <th> Brand </th>
+            <th> Type </th>
+            <th> Model </th>
+            <th> Station </th>
+            <th class = "text-center"> Actions </th>
+          </tr>
+        </thead>
+        <br/>
+
+        <tbody *ngFor = "let fleetData of fleetsList">
+          
+          <tr>
+            <td class = "text-center"> {{ fleetData.id }} </td>
+            <td> {{ fleetData.size }} </td>
+            <td> {{ fleetData.brand | titlecase }} </td>
+            <td> {{ fleetData.fleet_type | titlecase }} </td>
+            <td> {{ fleetData.fleet_model | titlecase }} </td>
+            <td> {{ fleetData.station | titlecase }} </td>
+            <td class = "text-center">
+              <button class = "btn btn-danger mr-2" data-bs-toggle = "modal" data-bs-target = "#deleteModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "deleteClick(fleetData)">
+                <i class = "bi bi-trash"></i>
+              </button>
+              <button class = "btn btn-info" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "editClick(fleetData)">
+                <i class = "bi bi-pencil"></i>
+              </button>
+            </td>  
+          </tr>
+          <br/>
+          
+        </tbody>
+      </table>
+
+  </div>
+
+</div>
+
+<!-- Modals -->
+
+<!-- AddEdit Modal -->
+<div class = "modal fade" id = "addEditModal">
+  <div class = "modal-dialog modal-dialog-centered">
+    <div class = "modal-content container">
+    
+      <!-- Modal Header -->
+      <div class = "modal-header">
+        <h5 class = "modal-title">
+          <span><i class = "bi bi-diagram-3"></i></span>
+          <span> {{ modalTitle }} </span> 
+        </h5>
+        <button type = "button" class = "btn-close" data-bs-dismiss = "modal" (click) = "closeClick()"></button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class = "modal-body">
+        <app-add-edit-fleet [fleet] = "fleet" *ngIf = "ActivateAddEditFleetComp"></app-add-edit-fleet>
+      </div>
+      
+    </div>
+  </div>
+</div>
