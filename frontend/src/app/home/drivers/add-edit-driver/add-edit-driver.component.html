@@ -1,27 +1,27 @@
 
 <form>
 
-    <div class = "row form-group">
+    <div class = "row form-group mb-3">
         <div class = "col-12 form-group">
-            <label for = "name" class = "font-weight-bolder"> Name </label>
+            <label for = "name" class = "fw-bold"> Name </label>
             <input type = "name" class = "form-control" placeholder = "Enter name" id = "name" [(ngModel)] = "driver.name" [ngModelOptions] = "{standalone: true}">
           </div>  
     </div>
 
-    <div class = "row form-group">
+    <div class = "row form-group mb-3">
         <div class = "col-6 form-group">
-            <label for = "phone" class = "font-weight-bolder"> Phone </label>
+            <label for = "phone" class = "fw-bold"> Phone </label>
             <input type = "phone" class = "form-control" placeholder = "Enter phone" id = "phone" [(ngModel)] = "driver.phone" [ngModelOptions] = "{standalone: true}">
           </div>
           <div class = "col-6 form-group">
-            <label for = "email" class = "font-weight-bolder"> Email </label>
+            <label for = "email" class = "fw-bold"> Email </label>
             <input type = "email" class = "form-control" placeholder = "Enter email" id = "email" [(ngModel)] = "driver.email" [ngModelOptions] = "{standalone: true}">
           </div>  
     </div>
 
-    <div class = "row mb-3">
+    <div class = "row">
       <div class = "col-12 form-group">
-        <label for = "station" class = "font-weight-bolder"> Select Trip </label>
+        <label for = "station" class = "fw-bold"> Select Trip </label>
         <select class = "form-control" id = "gender" [(ngModel)] = "driver.trip" [ngModelOptions] = "{standalone: true}">
           <option> -- Select Trip -- </option>
           <option *ngFor = "let trip of trips">
@@ -31,12 +31,12 @@
       </div>  
     </div>
 
-    <button (click) = "addDriver()" *ngIf = "driver.id == 0" class = "btn btn-primary w-100 mt-2">
+    <button (click) = "addDriver()" *ngIf = "driver.id == 0" class = "btn btn-primary w-100 mt-3 mb-3">
       <span><i class = "bi bi-plus"></i></span>
       <span> Add </span>
     </button>
   
-    <button (click) = "updateDriver()" *ngIf = "driver.id != 0" class = "btn btn-primary w-100 mt-2">
+    <button (click) = "updateDriver()" *ngIf = "driver.id != 0" class = "btn btn-primary w-100 mt-3 mb-3">
       <span><i class = "bi bi-plus"></i></span>
       <span> Update </span>
     </button>
