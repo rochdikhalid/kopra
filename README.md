@@ -1,5 +1,5 @@
 # kopra
-A simple full-stack taxi management web app built with Django, Angular, Leaflet, and PostgreSQL
+A simple full-stack taxi management web app built with Django, Angular, Leaflet, and PostgreSQL. The app is a collection of CRUD operations to simulate some basic tasks of the most common fleet management software.
 
 # Step I - Backend Setup
 
