@@ -22,6 +22,10 @@ c- Install the dependencies as highlighted below using the requirement.txt file:
 
 `pip install -r requirements.txt`
 
+d- To make sure that all dependencies are installed correctly:
+
+`pip freeze`
+
 ## 2- Development Server
 
 a- Go to coreApi directory and migrate the existing database tables:<br>
