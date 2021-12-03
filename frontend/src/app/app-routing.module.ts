@@ -10,6 +10,10 @@ import { PassengersComponent } from './home/passengers/passengers.component';
 import { TripsComponent } from './home/trips/trips.component';
 
 const routes: Routes = [
+  
+  // Default route 
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+
   { path: '', component: HomeComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
