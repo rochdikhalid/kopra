@@ -5,5 +5,6 @@ from trips import views
 
 
 urlpatterns = [
-    path('<int:id>/', views.tripApi),
+    path('api/trips/', views.tripApi),
+    path('api/trips/<int:id>/', views.tripApi),
 ]
