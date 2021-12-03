@@ -11,14 +11,14 @@
           <div class = "header">
               <h5>
                   <span><i class = "bi bi-person-bounding-box"></i></span>
-                  <span class = "font-weight-bolder"> {{ parentData.headerTitle }} </span>
+                  <span class = "fw-bold"> {{ parentData.headerTitle }} </span>
                   <p> {{ parentData.headerDescription }} </p>
               </h5>
           </div>
       
           <!-- Add a new data -->
           <div class = "header">
-              <button class = "btn btn-outline-light float-right font-weight-bolder" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "addClick()">
+              <button class = "btn btn-outline-light float-right fw-bold" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "addClick()">
                   <span><i class = "bi bi-plus"></i></span>
                   <span> {{ parentData.headerBtn }} </span> 
               </button>
@@ -61,7 +61,7 @@
                 <button class = "btn btn-danger mr-2" data-bs-toggle = "modal" data-bs-target = "#deleteModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "deleteClick(commuterData)">
                   <i class = "bi bi-trash"></i>
                 </button>
-                <button class = "btn btn-info" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "editClick(commuterData)">
+                <button class = "text-light btn btn-info" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "editClick(commuterData)">
                   <i class = "bi bi-pencil"></i>
                 </button>
               </td>  
