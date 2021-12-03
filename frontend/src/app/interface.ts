@@ -24,7 +24,7 @@ export class Fleet {
     station!: string;
 }
 
-export class Passenger {
+export class Commuter {
     id!: number;
     name!: string;
     email!: string;
