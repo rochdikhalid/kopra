@@ -1,36 +1,36 @@
 <form>
   
-    <div class = "form-group">
-      <label for = "name" class = "font-weight-bolder"> Station name </label>
+    <div class = "form-group mb-3">
+      <label for = "name" class = "fw-bold"> Station name </label>
       <input type = "name" class = "form-control" placeholder = "Enter station name" id = "name" [(ngModel)] = "station.name" [ngModelOptions] = "{standalone: true}">
     </div>
 
-    <div class = "form-group">
-      <label for = "location" class = "font-weight-bolder"> Location </label>
+    <div class = "form-group mb-3">
+      <label for = "location" class = "fw-bold"> Location </label>
       <input type = "location" class = "form-control" placeholder = "Enter location" id = "location" [(ngModel)] = "station.location_string" [ngModelOptions] = "{standalone: true}">
     </div>
 
-    <div class = "map rounded mb-3" id = "map">
+    <div class = "map rounded mb-3 mt-3" id = "map">
 
     </div>
 
-    <div class = "row form-group">
+    <div class = "row form-group mb-4">
         <div class = "col-6 form-group">
-            <label for = "area" class = "font-weight-bolder"> Area </label>
+            <label for = "area" class = "fw-bold"> Area </label>
             <input type = "area" class = "form-control" placeholder = "Enter area (XXX)" id = "area" [(ngModel)] = "station.area" [ngModelOptions] = "{standalone: true}">
           </div>
           <div class = "col-6 form-group">
-            <label for = "capacity" class = "font-weight-bolder"> Capacity </label>
+            <label for = "capacity" class = "fw-bold"> Capacity </label>
             <input type = "capacity" class = "form-control" placeholder = "Enter capacity (XXX)" id = "capacity" [(ngModel)] = "station.capacity" [ngModelOptions] = "{standalone: true}">
           </div>  
     </div>
 
-    <button (click) = "addStation()" *ngIf = "station.id == 0" class = "btn btn-primary w-100">
+    <button (click) = "addStation()" *ngIf = "station.id == 0" class = "btn btn-primary w-100 mb-3">
         <span><i class = "bi bi-plus"></i></span>
         <span> Add </span>
     </button>
 
-    <button (click) = "updateStation()" *ngIf = "station.id != 0" class = "btn btn-primary w-100">
+    <button (click) = "updateStation()" *ngIf = "station.id != 0" class = "btn btn-primary w-100 mb-3">
       <span><i class = "bi bi-plus"></i></span>
       <span> Update </span>
     </button>
