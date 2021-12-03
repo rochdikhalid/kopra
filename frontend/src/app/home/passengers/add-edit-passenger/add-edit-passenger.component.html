@@ -1,20 +1,20 @@
 <form> 
 
-    <div class = "row form-group">
+    <div class = "row form-group mb-3">
         <div class = "col-12 form-group">
             <label for = "name" class = "font-weight-bolder"> Name </label>
             <input type = "name" class = "form-control" placeholder = "Enter name" id = "name" [(ngModel)] = "commuter.name" [ngModelOptions] = "{standalone: true}">
           </div>
     </div>
 
-    <div class = "row form-group">
+    <div class = "row form-group mb-3">
         <div class = "col-12 form-group">
         <label for = "email" class = "font-weight-bolder"> Email </label>
         <input type = "email" class = "form-control" placeholder = "Enter email" id = "email" [(ngModel)] = "commuter.email" [ngModelOptions] = "{standalone: true}">
         </div>  
     </div>
 
-    <div class = "row form-group">
+    <div class = "row form-group mb-3">
         <div class = "col-6 form-group">
             <label for = "date-of-birth" class = "font-weight-bolder"> Date of birth </label>
             <input type = "date" class = "form-control" placeholder = "Enter date of birth" id = "date-of-birth" [(ngModel)] = "commuter.dob" [ngModelOptions] = "{standalone: true}">
@@ -38,12 +38,12 @@
         </select>
     </div>  
 
-    <button (click) = "addCommuter()" *ngIf = "commuter.id == 0" class = "btn btn-primary w-100">
+    <button (click) = "addCommuter()" *ngIf = "commuter.id == 0" class = "btn btn-primary w-100 mt-3 mb-3">
         <span><i class = "bi bi-plus"></i></span>
         <span> Add </span>
       </button>
     
-    <button (click) = "updateCommuter()" *ngIf = "commuter.id != 0" class = "btn btn-primary w-100">
+    <button (click) = "updateCommuter()" *ngIf = "commuter.id != 0" class = "btn btn-primary w-100 mt-3 mb-3">
         <span><i class = "bi bi-plus"></i></span>
         <span> Update </span>
     </button>
