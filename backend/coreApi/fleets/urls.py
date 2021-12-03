@@ -5,5 +5,7 @@ from fleets import views
 
 
 urlpatterns = [
-    path('<int:id>/', views.fleetApi),
+    path('api/fleets/', views.fleetApi),
+    path('api/fleets/<int:id>/', views.fleetApi),
 ]
+
