@@ -53,6 +53,10 @@
     border-color: #7d4c9e;
 }
 
+table td button {
+    margin-left: 10px;
+}
+
 .card .table tbody {
     border-style: none;
 }
