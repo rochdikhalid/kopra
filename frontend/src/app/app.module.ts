@@ -11,7 +11,17 @@ import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
 import { HeaderComponent } from './panel/header/header.component';
 import { SidebarComponent } from './panel/sidebar/sidebar.component';
-
+/* Home details */
+import { ShowDeleteStationComponent } from './home/stations/show-delete-station/show-delete-station.component';
+import { AddEditStationComponent } from './home/stations/add-edit-station/add-edit-station.component';
+import { AddEditFleetComponent } from './home/fleets/add-edit-fleet/add-edit-fleet.component';
+import { ShowDeleteFleetComponent } from './home/fleets/show-delete-fleet/show-delete-fleet.component';
+import { ShowDeleteDriverComponent } from './home/drivers/show-delete-driver/show-delete-driver.component';
+import { AddEditDriverComponent } from './home/drivers/add-edit-driver/add-edit-driver.component';
+import { ShowDeletePassengerComponent } from './home/passengers/show-delete-passenger/show-delete-passenger.component';
+import { AddEditPassengerComponent } from './home/passengers/add-edit-passenger/add-edit-passenger.component';
+import { ShowDeleteTripComponent } from './home/trips/show-delete-trip/show-delete-trip.component';
+import { AddEditTripComponent } from './home/trips/add-edit-trip/add-edit-trip.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +30,16 @@ import { SidebarComponent } from './panel/sidebar/sidebar.component';
     PanelComponent,
     HeaderComponent,
     SidebarComponent,
+    ShowDeleteStationComponent,
+    AddEditStationComponent,
+    AddEditFleetComponent,
+    ShowDeleteFleetComponent,
+    ShowDeleteDriverComponent,
+    AddEditDriverComponent,
+    ShowDeletePassengerComponent,
+    AddEditPassengerComponent,
+    ShowDeleteTripComponent,
+    AddEditTripComponent,
   ],
 
   imports: [
