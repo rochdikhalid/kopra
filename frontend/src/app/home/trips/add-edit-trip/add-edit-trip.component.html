@@ -1,5 +1,5 @@
 <form>
-    <div class = "form-group">
+    <div class = "form-group mb-3">
       <label for = "station" class = "text-muted"> Select Start and End points </label>
       <div class = "row">
         <div class = "col-5 form-group">
@@ -28,22 +28,22 @@
 
     </div>
 
-    <div class = "form-group">
-      <label for = "distance" class = "font-weight-bolder"> Distance </label>
+    <div class = "form-group mb-3">
+      <label for = "distance" class = "fw-bold"> Distance </label>
       <input type = "distance" class = "form-control" placeholder = "Distance (selected automatically)" id = "location" [(ngModel)] = "trip.distance" [ngModelOptions] = "{standalone: true}">
     </div>
 
     <div class = "form-group">
-      <label for = "duration" class = "font-weight-bolder"> Duration </label>
+      <label for = "duration" class = "fw-bold"> Duration </label>
       <input type = "duration" class = "form-control" placeholder = "Duration (selected automatically)" id = "name" [(ngModel)] = "trip.duration" [ngModelOptions] = "{standalone: true}">
     </div>
 
-    <button (click) = "addTrip()" *ngIf = "trip.id == 0" class = "btn btn-primary w-100 mt-2">
+    <button (click) = "addTrip()" *ngIf = "trip.id == 0" class = "btn btn-primary w-100 mt-3 mb-3">
       <span><i class = "bi bi-plus"></i></span>
       <span> Add </span>
     </button>
 
-    <button (click) = "updateTrip()" *ngIf = "trip.id != 0" class = "btn btn-primary w-100 mt-2">
+    <button (click) = "updateTrip()" *ngIf = "trip.id != 0" class = "btn btn-primary w-100 mt-3 mb-3">
       <span><i class = "bi bi-plus"></i></span>
       <span> Update </span>
     </button>
