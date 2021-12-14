@@ -3,7 +3,6 @@ from trips.models import Trips
 
 
 
-
 # Stations Serializer
 class TripSerializer(serializers.ModelSerializer):
 
