@@ -3,7 +3,6 @@ from fleets.models import Fleets
 
 
 
-
 # Fleets Serializer
 class FleetSerializer(serializers.ModelSerializer):
 
