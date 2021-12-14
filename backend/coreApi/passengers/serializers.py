@@ -3,7 +3,6 @@ from passengers.models import Passengers
 
 
 
-
 # Passengers Serializer
 class PassengerSerializer(serializers.ModelSerializer):
 
