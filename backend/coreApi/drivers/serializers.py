@@ -3,7 +3,6 @@ from drivers.models import Drivers
 
 
 
-
 # Drivers Serializer
 class DriverSerializer(serializers.ModelSerializer):
 
