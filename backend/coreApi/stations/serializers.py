@@ -3,7 +3,6 @@ from stations.models import Stations
 
 
 
-
 # Stations Serializer
 class StationSerializer(serializers.ModelSerializer):
 
