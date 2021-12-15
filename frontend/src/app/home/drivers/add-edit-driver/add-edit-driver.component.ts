@@ -1,13 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { SharedService } from 'src/app/shared.service';
 import { Driver } from 'src/app/interface';
+
+
 
 @Component({
   selector: 'app-add-edit-driver',
   templateUrl: './add-edit-driver.component.html',
   styleUrls: ['./add-edit-driver.component.css']
 })
+
 export class AddEditDriverComponent implements OnInit {
 
   @Input() driver: Driver = new Driver();
@@ -19,7 +21,7 @@ export class AddEditDriverComponent implements OnInit {
   ngOnInit(): void {
     
     this.loadtrips();
-
+    
   }
 
   // Load trips
@@ -44,5 +46,5 @@ export class AddEditDriverComponent implements OnInit {
       alert(res.toString());
     });
   }
-
+  
 }
