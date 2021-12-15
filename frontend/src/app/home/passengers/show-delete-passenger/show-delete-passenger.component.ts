@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
 import { Commuter } from 'src/app/interface';
 
+
+
 @Component({
   selector: 'app-show-delete-passenger',
   templateUrl: './show-delete-passenger.component.html',
@@ -30,7 +32,6 @@ export class ShowDeletePassengerComponent implements OnInit {
   };
 
   addClick() {
-
     this.commuter = {
       id: 0,
       name: '',
@@ -42,7 +43,6 @@ export class ShowDeletePassengerComponent implements OnInit {
 
     this.modalTitle = "Add Passenger";
     this.ActivateAddEditCommuterComp = true;
-
   }
 
   editClick(item: any) {
