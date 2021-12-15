@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
 import { Driver } from 'src/app/interface';
 
+
+
 @Component({
   selector: 'app-show-delete-driver',
   templateUrl: './show-delete-driver.component.html',
@@ -30,7 +32,6 @@ export class ShowDeleteDriverComponent implements OnInit {
   };
 
   addClick() {
-
     this.driver = {
       id: 0,
       name: '',
@@ -38,10 +39,8 @@ export class ShowDeleteDriverComponent implements OnInit {
       email: '',
       trip: ''
     };
-
     this.modalTitle = "Add Driver";
     this.ActivateAddEditDriverComp = true;
-
   }
 
   editClick(item: any) {
