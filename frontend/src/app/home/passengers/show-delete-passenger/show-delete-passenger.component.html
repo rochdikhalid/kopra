@@ -1,21 +1,16 @@
 <!-- First card -->
 <div class = "card">
-
   <div class = "card-body panel-0 rounded">
-
       <!-- Sub-content-1 -->
       <div class = "d-flex justify-content-between">
-
-          <!-- Title and description -->
-                  
+          <!-- Title and description -->              
           <div class = "header">
               <h5>
                   <span><i class = "bi bi-person-bounding-box"></i></span>
                   <span class = "fw-bold"> {{ parentData.headerTitle }} </span>
                   <p> {{ parentData.headerDescription }} </p>
               </h5>
-          </div>
-      
+          </div>    
           <!-- Add a new data -->
           <div class = "header">
               <button class = "btn btn-outline-light float-right fw-bold" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "addClick()">
@@ -23,79 +18,69 @@
                   <span> {{ parentData.headerBtn }} </span> 
               </button>
           </div>
+      </div>
+  </div>
+</div>
+  
+<!-- Sub-content-2 -->
+<div class = "card">
+  <div class = "card-body">
+    <!-- Table -->
+    <table class = "table">
+        <thead class = "pl-4">
+          <tr>
+            <th class = "text-center"> # </th>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Gender </th>
+            <th> Subscription </th>
+            <th class = "text-center"> Actions </th>
+          </tr>
+        </thead>
+        <br/>
+        <tbody *ngFor = "let commuterData of commutersList">
+          <tr>
+            <td class = "text-center"> {{ commuterData.id }} </td>
+            <td> {{ commuterData.name | titlecase }} </td>
+            <td> {{ commuterData.email }} </td>
+            <td> {{ commuterData.gender | titlecase }} </td>
+            <td> {{ commuterData.subscription | titlecase }} </td>
+            <td class = "text-center">
+              <button class = "btn btn-danger mr-2" data-bs-toggle = "modal" data-bs-target = "#deleteModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "deleteClick(commuterData)">
+                <i class = "bi bi-trash"></i>
+              </button>
+              <button class = "text-light btn btn-info" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "editClick(commuterData)">
+                <i class = "bi bi-pencil"></i>
+              </button>
+            </td>  
+          </tr>
+          <br/>
+        </tbody>
+      </table>
+  </div>
+</div>
+  
+<!-- Modals -->
 
+<!-- AddEdit Modal -->
+<div class = "modal fade" id = "addEditModal">
+
+  <div class = "modal-dialog modal-dialog-centered">
+    <div class = "modal-content container">     
+      <!-- Modal Header -->
+      <div class = "modal-header">
+        <h5 class = "modal-title">
+          <span><i class = "bi bi-person-bounding-box"></i></span>
+          <span> {{ modalTitle }} </span> 
+        </h5>
+        <button type = "button" class = "btn-close" data-bs-dismiss = "modal" (click) = "closeClick()"></button>
       </div>
 
+      <!-- Modal body -->
+      <div class = "modal-body">
+        <app-add-edit-passenger [commuter] = "commuter" *ngIf = "ActivateAddEditCommuterComp"></app-add-edit-passenger>
+      </div>
+    </div>
   </div>
 
 </div>
-  
-  <!-- Sub-content-2 -->
-  <div class = "card">
-  
-    <div class = "card-body">
-  
-      <!-- Table -->
-      <table class = "table">
-          <thead class = "pl-4">
-            <tr>
-              <th class = "text-center"> # </th>
-              <th> Name </th>
-              <th> Email </th>
-              <th> Gender </th>
-              <th> Subscription </th>
-              <th class = "text-center"> Actions </th>
-            </tr>
-          </thead>
-          <br/>
-  
-          <tbody *ngFor = "let commuterData of commutersList">
-            
-            <tr>
-              <td class = "text-center"> {{ commuterData.id }} </td>
-              <td> {{ commuterData.name | titlecase }} </td>
-              <td> {{ commuterData.email }} </td>
-              <td> {{ commuterData.gender | titlecase }} </td>
-              <td> {{ commuterData.subscription | titlecase }} </td>
-              <td class = "text-center">
-                <button class = "btn btn-danger mr-2" data-bs-toggle = "modal" data-bs-target = "#deleteModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "deleteClick(commuterData)">
-                  <i class = "bi bi-trash"></i>
-                </button>
-                <button class = "text-light btn btn-info" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "editClick(commuterData)">
-                  <i class = "bi bi-pencil"></i>
-                </button>
-              </td>  
-            </tr>
-            <br/>
-            
-          </tbody>
-        </table>
-  
-    </div>
-  
-  </div>
-  
-  <!-- Modals -->
-  
-  <!-- AddEdit Modal -->
-  <div class = "modal fade" id = "addEditModal">
-    <div class = "modal-dialog modal-dialog-centered">
-      <div class = "modal-content container">
-      
-        <!-- Modal Header -->
-        <div class = "modal-header">
-          <h5 class = "modal-title">
-            <span><i class = "bi bi-person-bounding-box"></i></span>
-            <span> {{ modalTitle }} </span> 
-          </h5>
-          <button type = "button" class = "btn-close" data-bs-dismiss = "modal" (click) = "closeClick()"></button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class = "modal-body">
-          <app-add-edit-passenger [commuter] = "commuter" *ngIf = "ActivateAddEditCommuterComp"></app-add-edit-passenger>
-        </div>
-        
-      </div>
-    </div>
-  </div>
