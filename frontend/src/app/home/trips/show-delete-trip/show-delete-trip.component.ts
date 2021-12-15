@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { SharedService } from 'src/app/shared.service';
 import { Trip } from 'src/app/interface';
+
+
 
 @Component({
   selector: 'app-show-delete-trip',
@@ -31,7 +32,6 @@ export class ShowDeleteTripComponent implements OnInit {
   };
 
   addClick() {
-
     this.trip = {
       id: 0,
       trip_from: '-- Select From --',
@@ -42,7 +42,6 @@ export class ShowDeleteTripComponent implements OnInit {
 
     this.modalTitle = "Add Trip";
     this.ActivateAddEditTripComp = true;
-
   }
 
   editClick(item: any){
