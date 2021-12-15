@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
 import { Fleet } from 'src/app/interface';
 
+
+
 @Component({
   selector: 'app-show-delete-fleet',
   templateUrl: './show-delete-fleet.component.html',
@@ -29,7 +31,6 @@ export class ShowDeleteFleetComponent implements OnInit {
   };
 
   addClick() {
-
     this.fleet = {
       id: 0,
       size: 0,
@@ -38,10 +39,8 @@ export class ShowDeleteFleetComponent implements OnInit {
       fleet_model: '',
       station: ''
     };
-
     this.modalTitle = "Add Fleet";
     this.ActivateAddEditFleetComp = true;
-
   }
 
   editClick(item: any) {
