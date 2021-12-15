@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { SharedService } from 'src/app/shared.service';
 import * as L from 'leaflet';
 import { Station } from 'src/app/interface';
+
+
 
 @Component({
   selector: 'app-add-edit-station',
@@ -24,36 +25,26 @@ export class AddEditStationComponent implements OnInit {
       attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     }).addTo(myMap);
 
-
     var station_marker: any;
 
     const onMapClick = (e: any) => {
-  
       let loc_string = e.latlng.toString();
       let loc_stringify = JSON.stringify(e.latlng);
-      //console.log(loc.length);
-      //let x = document.getElementById('location')!.setAttribute('value', loc);
       this.station.location_string = loc_string;
       this.station.loc_stringify = loc_stringify;
-      //L.marker(e.latlng).addTo(myMap);
       let stationIcon = L.icon({
         iconUrl: 'assets/icons/station.png',
         iconSize: [24, 24], // size of the icon
       });
-
       if (station_marker) {
         myMap.removeLayer(station_marker)
       }
-
       station_marker = L.marker(JSON.parse(loc_stringify), {icon: stationIcon, draggable: false}).addTo(myMap);
-
     }
     
     myMap.on('click', onMapClick);
 
   }
-
-
 
   // Add a station
   addStation() {
