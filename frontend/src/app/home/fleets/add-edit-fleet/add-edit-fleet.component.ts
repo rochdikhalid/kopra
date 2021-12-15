@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { SharedService } from 'src/app/shared.service';
 import { Fleet } from 'src/app/interface';
+
+
 
 @Component({
   selector: 'app-add-edit-fleet',
@@ -18,9 +19,7 @@ export class AddEditFleetComponent implements OnInit {
   constructor(private service: SharedService) {}
 
   ngOnInit(): void {
-
     this.loadStationsNames();
-  
   }
 
   // Load stations' names
