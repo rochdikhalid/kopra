@@ -4,6 +4,7 @@ import { Trip, Commuter } from 'src/app/interface';
 import * as L from 'leaflet';
 
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,7 +12,6 @@ import * as L from 'leaflet';
 })
 
 export class DashboardComponent implements OnInit {
-
 
   public headerInfo: any = {
     headerTitle: 'Dashboard',
@@ -29,10 +29,8 @@ export class DashboardComponent implements OnInit {
   trip: Trip = new Trip();
   commuter: Commuter = new Commuter();
 
-
-
   ngOnInit(): void {
-
+    
     const myMap = L.map('map').setView([33.59, -7.62], 13);
   
     L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
@@ -56,9 +54,8 @@ export class DashboardComponent implements OnInit {
 
     this.refreshTripsList();
     this.refreshCommutersList();
-
+    
   }
-
 
   refreshTripsList() {
     this.service.getTripsList().subscribe(data => {
@@ -77,6 +74,5 @@ export class DashboardComponent implements OnInit {
       this.commutersList = data;
     });
   };
-
 
 }
