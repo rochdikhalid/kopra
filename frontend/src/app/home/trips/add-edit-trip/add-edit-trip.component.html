@@ -1,5 +1,7 @@
 <form>
+  
     <div class = "form-group mb-3">
+      
       <label for = "station" class = "text-muted"> Select Start and End points </label>
       <div class = "row">
         <div class = "col-5 form-group">
@@ -10,6 +12,7 @@
             </option>
           </select>
         </div>  
+        
         <div class = "col-5 form-group">
           <select class = "form-control" id = "to_station" [(ngModel)] = "trip.trip_to" [ngModelOptions] = "{standalone: true}">
             <option> -- Select To -- </option>
@@ -18,10 +21,12 @@
             </option>
           </select>
         </div> 
+        
         <div class = "col-2 form-group">
           <button class = "btn btn-warning" id = "go"> GO </button>
         </div>
       </div>
+      
     </div>
 
     <div class = "map rounded mb-3" id = "map">
