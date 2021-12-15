@@ -1,22 +1,17 @@
 
 <!-- First card -->
 <div class = "card">
-
   <div class = "card-body panel-0 rounded">
-
       <!-- Sub-content-1 -->
       <div class = "d-flex justify-content-between">
-
-          <!-- Title and description -->
-                  
+          <!-- Title and description -->                
           <div class = "header">
               <h5>
                   <span><i class = "bi bi-cursor"></i></span>
                   <span class = "fw-bold"> {{ parentData.headerTitle }} </span>
                   <p> {{ parentData.headerDescription }} </p>
               </h5>
-          </div>
-      
+          </div>    
           <!-- Add a new data -->
           <div class = "header">
               <button class = "btn btn-outline-light float-right fw-bold" data-bs-toggle = "modal" data-bs-target = "#addEditModal" data-bs-backdrop = "static" data-bs-keyboard = "false" (click) = "addClick()">
@@ -24,18 +19,13 @@
                   <span> {{ parentData.headerBtn }} </span> 
               </button>
           </div>
-
       </div>
-
   </div>
-
 </div>
   
-<!-- Sub-content-2 -->
+<!-- Second card -->
 <div class = "card">
-
   <div class = "card-body">
-
     <!-- Table -->
     <table class = "table">
         <thead class = "pl-4">
@@ -49,9 +39,7 @@
           </tr>
         </thead>
         <br/>
-
-        <tbody *ngFor = "let tripData of tripsList">
-          
+        <tbody *ngFor = "let tripData of tripsList">         
           <tr>
             <td class = "text-center"> {{ tripData.id }} </td>
             <td> {{ tripData.trip_from | titlecase }} </td>
@@ -67,13 +55,10 @@
               </button>
             </td>  
           </tr>
-          <br/>
-          
+          <br/>      
         </tbody>
       </table>
-
   </div>
-
 </div>
   
 <!-- Modals -->
