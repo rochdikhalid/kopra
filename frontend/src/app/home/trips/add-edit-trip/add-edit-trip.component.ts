@@ -4,6 +4,8 @@ import * as L from 'leaflet';
 import * as $ from 'jquery';
 import { Trip } from 'src/app/interface';
 
+
+
 @Component({
   selector: 'app-add-edit-trip',
   templateUrl: './add-edit-trip.component.html',
@@ -33,7 +35,7 @@ export class AddEditTripComponent implements OnInit {
     var polyline: any;
 
     const display = () => {
-  
+ 
       let from_select = $('#from_station option:selected').val();
       let to_select = $('#to_station option:selected').val();
   
@@ -71,16 +73,12 @@ export class AddEditTripComponent implements OnInit {
   
       this.trip.distance = parseFloat(distance.toFixed(2)) // unit: km;
       this.trip.duration = parseFloat((distance / speed).toFixed(2)) // unit: hour;
-
-      // console.log(station_one, station_two);
   
     }
 
     goButton.on('click', display);
     
   }
-
-  
 
   // Load stations' names
   loadStationsNames() {
@@ -92,7 +90,6 @@ export class AddEditTripComponent implements OnInit {
   // I used here jQuery temporarily, till I figure out how I can accomplish the same using pure JavaScript
 
   disable() {
-
     $('#to_station option').removeAttr("disabled");
     let selected = $('#from_station option:selected').val();
     if (selected != 0) {
@@ -116,10 +113,6 @@ export class AddEditTripComponent implements OnInit {
     });
   };
 
-  
+}
 
-}
-function dioplo() {
-  throw new Error('Function not implemented.');
-}
 
