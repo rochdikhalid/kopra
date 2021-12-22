@@ -3,7 +3,7 @@ A simple full-stack taxi management web app built with **Django**, **Angular**, 
 
 # Step I - Backend Setup
 
-The project backend was generated with [Django](https://github.com/django/django) version 3.2.9, make sure you have the latest version of **Python** installed (prefered).<br>
+The project backend was generated with [Django](https://github.com/django/django) version 3.2.9, make sure you have the latest version of **Python** installed (prefered).
 
 ## 1- Virtual Environment Configuration
 
